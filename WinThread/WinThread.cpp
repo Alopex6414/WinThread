@@ -99,6 +99,18 @@ bool WINAPI CWinThread::WinThreadInit(bool bSuspend)
 }
 
 //------------------------------------------------------------------
+// @Function:	 WinThreadSetPriority(int nPriority)
+// @Purpose: WinThread线程设置优先级
+// @Since: v1.00a
+// @Para: int nPriority		//线程优先级
+// @Return: None
+//------------------------------------------------------------------
+void WINAPI CWinThread::WinThreadSetPriority(int nPriority)
+{
+	SetThreadPriority(m_hThread, nPriority);	//线程优先级
+}
+
+//------------------------------------------------------------------
 // @Function:	 WinThreadRun()
 // @Purpose: WinThread线程运行
 // @Since: v1.00a

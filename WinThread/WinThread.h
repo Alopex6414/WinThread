@@ -62,6 +62,7 @@ public:
 	DWORD WINAPI WinThreadGetID() const;								//线程ID获取
 
 	virtual bool WINAPI WinThreadInit(bool bSuspend = false);			//线程初始化(挂起:true)
+	virtual void WINAPI WinThreadSetPriority(int nPriority);			//线程设置优先级(THREAD_PRIORITY_ABOVE_NORMAL)
 	virtual void WINAPI WinThreadRun();									//线程运行(重写)
 	virtual void WINAPI WinThreadJoin(int nTimeOut = -1);				//线程等待结束
 	virtual void WINAPI WinThreadResume();								//线程恢复
