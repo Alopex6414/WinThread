@@ -6,9 +6,10 @@
 * @file		WinLock.cpp
 * @brief	This Program is WinLock DLL Project.
 * @author	Alopex/Helium
-* @version	v1.10a
-* @date		2017-12-8	v1.00a	alopex	Create Project
-* @date		2017-12-9	v1.10a	alopex	Code Do Not Rely On MSVCR Library
+* @version	v1.11a
+* @date		2017-12-8	v1.00a	alopex	Create Project.
+* @date		2017-12-9	v1.10a	alopex	Code Do Not Rely On MSVCR Library.
+* @date		2017-1-4	v1.11a	alopex	Cancel inline.
 */
 #include "WinLock.h"
 

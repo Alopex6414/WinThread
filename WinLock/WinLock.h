@@ -6,9 +6,10 @@
 * @file		WinLock.h
 * @brief	This Program is WinLock DLL Project.
 * @author	Alopex/Helium
-* @version	v1.10a
-* @date		2017-12-8	v1.00a	alopex	Create Project
-* @date		2017-12-9	v1.10a	alopex	Code Do Not Rely On MSVCR Library
+* @version	v1.11a
+* @date		2017-12-8	v1.00a	alopex	Create Project.
+* @date		2017-12-9	v1.10a	alopex	Code Do Not Rely On MSVCR Library.
+* @date		2017-1-4	v1.11a	alopex	Cancel inline.
 */
 #pragma once
 
@@ -44,8 +45,8 @@ private:
 	CRITICAL_SECTION* m_pCriticalSection;
 
 public:
-	inline CWinCriticalLock(CRITICAL_SECTION* pCriticalSection);	//构造
-	inline ~CWinCriticalLock();										//析构
+	CWinCriticalLock(CRITICAL_SECTION* pCriticalSection);			//构造
+	~CWinCriticalLock();											//析构
 };
 
 //CriticalLockEx类(临界区)(内部临界区)
@@ -55,8 +56,8 @@ private:
 	CRITICAL_SECTION m_CriticalSection;
 
 public:
-	inline CWinCriticalLockEx();									//构造
-	inline ~CWinCriticalLockEx();									//析构
+	CWinCriticalLockEx();											//构造
+	~CWinCriticalLockEx();											//析构
 };
 
 //MutexLock类(互斥对象)(外部互斥体)
@@ -66,10 +67,10 @@ private:
 	HANDLE* m_pMutex;
 
 public:
-	inline CWinMutexLock(HANDLE* pMutex);							//构造
-	inline ~CWinMutexLock();										//析构
-	inline void Lock() const;
-	inline void Unlock() const;
+	CWinMutexLock(HANDLE* pMutex);									//构造
+	~CWinMutexLock();												//析构
+	void Lock() const;
+	void Unlock() const;
 };
 
 //MutexLockEx类(互斥对象)(内部互斥体)
@@ -79,10 +80,10 @@ private:
 	HANDLE m_Mutex;
 
 public:
-	inline CWinMutexLockEx();										//构造
-	inline ~CWinMutexLockEx();										//析构
-	inline void Lock() const;
-	inline void Unlock() const;
+	CWinMutexLockEx();												//构造
+	~CWinMutexLockEx();												//析构
+	void Lock() const;
+	void Unlock() const;
 };
 
 #endif
